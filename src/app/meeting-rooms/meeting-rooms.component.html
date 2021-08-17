@@ -1,0 +1,78 @@
+<!-- https://codecraft.tv/courses/angular/quickstart/property-and-event-binding/
+    Input Property Binding
+
+    [name of DOM property] = result of JavaScript code
+
+The target inside [] is the name of the property. 
+The text to the right of = is JavaScript code that gets executed and the resulting value is assigned to the target.
+    
+    HTML Attribute vs DOM Property
+HTML is a set of written instructions for how to display a web page.
+The browser reads the HTML and creates something called a DOM, 
+a Document Object Model. This is the manifestation of those HTML instructions in memory.
+Changing the HTML doesn’t automatically update the webpage unless the user refreshes the browser, 
+changing the DOM however instantly updates the webpage.
+
+The hidden HTML attribute is a good example, 
+it only needs to exist on an HTML element to instruct the browser to hide the element.
+So hidden="true" hides the element
+but confusingly so does hidden="false" 
+in HTML we just need to add hidden to hide the element.
+The DOM representation of the hidden attribute is a property also called hidden, 
+which if set to true hides the element and false shows the element.
+Angular doesn’t manipulate HTML attributes, 
+it manipulates DOM properties because the DOM is what actually gets displayed.
+So when we write [hidden] we are manipulating the DOM property and not the HTML attribute.
+-->
+
+<div class="page-backgroud">
+    <div class="title-font page-title-position">Meeting Room System</div>
+    <!-- <button  class="button-group" type="button" class="btn btn-info" (click)="govInfo()">get GOV info</button> -->
+    <div class="page-title-position">roomName in parent: meeting-rooms html {{roomName}}</div>
+    <div class="room-list">
+        <ng-container *ngIf="show">
+            <!-- <div class="room-list-group" *ngFor="let data of dummyData" (click)="booking()"> -->
+            <div class="room-list-group" *ngFor="let data of dummyData">
+                <p class="room-title-font">{{data.room | uppercase}}</p>
+                <!-- <img class="{{data.class}} room-img" src={{data.url}} alt={{data.room}}> -->
+                <button (click)="showUI(data.class)"><img class="{{data.class}} room-img" src={{data.url}} alt={{data.room}}></button>
+                <!-- <input type="button"  style="background-image:url({{data.url}});width:80px;height:25px;"> -->
+            </div>
+        </ng-container>
+    </div>
+    <div class="button-group-positon">
+        <button class="button-font btn btn-outline-primary " (click)="booking()">BOOKING</button>
+        <button class="button-font btn btn-outline-primary " (click)="showAllUI()">SHOW ALL</button>    
+    </div>
+ 
+    <!-- <div class="menu" *ngIf="show">
+        <div class="meeting" *ngFor="let data of dummyData">
+            <p>{{data.room}}</p>
+            <img src={{data.url}} alt={{data.room}}>
+
+        </div>
+    </div>
+
+    <div class="menu" *ngIf="show">
+        <div class="meeting">
+            <p>Tokyo</p>
+            <img src="https://pix10.agoda.net/hotelImages/43322/0/0a1ae728c76ec0150a8ccbcd8b5a7ee4.jpg?s=1024x768"
+                alt="Tokyo">
+        </div>
+        <div class="meeting">
+            <p>Dresden</p>
+            <img src="../../assets/dresden.jpg" alt="Dresden">
+            <img src="https://content.r9cdn.net/rimg/dimg/ab/27/01df0ad9-city-18925-165428b654b.jpg?width=1750&height=1000&xhint=1589&yhint=850&crop=true"
+                alt="Dresden">
+        </div>
+        <div class="meeting">
+            <p>Moscow</p>
+            <img src="../../assets/moscow.jpg" alt="Moscow">
+            <img src="https://www.umultirank.org/export/sites/default/.galleries/generic-images/Others/Winter-Calendar/moscow-1556561_1280.jpg_2040980717.jpg"
+                alt="Moscow">
+        </div>
+    </div> -->
+        <!-- <app-rooms ></app-rooms> -->
+
+    <app-rooms [roomName]="roomName"></app-rooms>
+</div>

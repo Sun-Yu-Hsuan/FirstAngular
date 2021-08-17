@@ -1,0 +1,64 @@
+<div class="backgroud">
+
+<p class="font-color">Booking Meeting Room</p>
+
+<!-- <div>
+    <label for="opCode">Operater Code:</label>
+    <input type="text" name="opCode" [(ngModel)]="opCode">
+    {{opCode}}
+</div>
+
+<div>
+    <label for="operater">Operater Code:</label>
+    <input type="text" name="operater" [formControl]="operater" placeholder="Enter your opcode here">
+    {{operater.value}}
+</div> -->
+
+<form class="row g-3">
+    <div class="col-md-6">
+      <label for="Subject" class="form-label form-font-color">Subject</label>
+      <input type="text" class="form-control" id="inputSubject">
+    </div>
+    <div class="col-md-6">
+      <label for="Operater" class="form-label  form-font-color">Operater</label>
+      <input type="text" class="form-control" id="inputOpcode" name="opCode" [(ngModel)]="opCode">
+      show {{opCode}}
+    </div>
+    <div class="col-12">
+      <label for="Members" class="form-label  form-font-color">Members</label>
+      <input type="text" class="form-control" id="inputAddress" placeholder="Input members' opcode">
+    </div>
+    <div class="col-md-4">
+        <label for="inputRoom" class="form-label  form-font-color">Meeting Room</label>
+        <select id="inputState" class="form-select">
+          <option selected>Choose...</option>
+          <option>Tokyo</option>
+          <option>Dresden</option>
+          <option>Moscow</option>
+        </select>
+    </div>
+    <div class="col-md-4">
+        <label for="inputState" class="form-label form-font-color">StartDate</label>
+        <select id="inputState" class="form-select">
+          <option selected>Choose...</option>
+          <option>...</option>
+        </select>
+    </div>
+    <div class="col-md-4">
+      <label for="inputState" class="form-label form-font-color">EndDate</label>
+      <select id="inputState" class="form-select">
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
+    </div>
+    <div class="col-12 button-positon">
+      <!-- apply bootstrap css style -->
+      <!-- <button class="button-font btn btn-outline-primary" (click)="goHome()">Cancel</button> -->
+      <button class="button-font btn btn-outline-primary" (click)="goHome()">Cancel</button>
+      <button class="button-font btn btn-outline-primary" [swal]="['Oops!', 'This is not implemented yet :/', 'warning']">Save</button>
+      <!-- <button id="test_swal" (click)="testSwal()">Save</button> -->
+    
+    </div>
+  </form>
+
+</div>

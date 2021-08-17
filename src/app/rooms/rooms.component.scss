@@ -1,0 +1,17 @@
+.font-color {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    -webkit-text-stroke: 1px white;
+    -webkit-text-fill-color: transparent;
+}
+.backgroud {
+    background-color: black;
+}
+
+.page-title-position {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;  
+}

@@ -1,0 +1,66 @@
+.page-backgroud {
+    background-color: black;
+    background-image: url(https://mrmad.com.tw/wp-content/uploads/2019/10/iphone-11-pro-shoots-the-stars-1.jpg);
+}
+.title-font {
+    color: yellow;
+    font-size: 50px;
+    font-weight: bold;
+    -webkit-text-stroke: 1px yellow;
+    -webkit-text-fill-color: transparent;  
+}
+.page-title-position {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;  
+}
+.room-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+}
+.room-list-group {
+    overflow: hidden;  
+    background-color:rgba(245, 245, 245, 0.836);
+    opacity: 0.75;
+    width: 20%;
+    height: 10vh;
+    margin: 10px;
+    border: 3px black solid;
+}
+.room-title-font {
+    position: absolute;
+    color: rgba(0, 0, 0, 0.856);
+    font-size: 40px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-left: 20px;
+}
+.room-img{
+    max-width: 100%;
+    // 如果圖片不夠高 就只設定高
+    // 如果圖片不夠寬 就只設定寬
+    opacity: 0.5;
+    &:hover {
+        opacity: 1;
+    }   
+}
+
+.button-group-positon{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+}
+.button-font {
+    color: red;
+    border: 1px solid red;
+    &:hover{
+        color: white;
+        background-color: red;
+    }
+}
+// .moscow {
+//     margin-top: 30px;
+// }

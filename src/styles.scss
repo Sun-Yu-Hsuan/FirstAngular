@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+    background-color: black;
+    background-image: url(https://mrmad.com.tw/wp-content/uploads/2019/10/iphone-11-pro-shoots-the-stars-1.jpg);
+}
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
